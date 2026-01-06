@@ -89,4 +89,9 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
+
+    public static String encodePassword(String password) {
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        return encoder.encode(password);
+    }
 }
