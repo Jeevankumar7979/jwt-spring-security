@@ -57,4 +57,9 @@ public class UserController {
         return "User Profile";
     }
 
+    @GetMapping("/admin/adminProfile")
+    public String adminProfiles() {
+        return "Admin Profile";
+    }
+
 }
