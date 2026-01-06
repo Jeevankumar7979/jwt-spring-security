@@ -90,4 +90,8 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
+    public static String encodePassword(String password, PasswordEncoder passwordEncoder) {
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        return encoder.encode(password);
+    }
 }

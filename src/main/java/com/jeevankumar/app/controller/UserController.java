@@ -63,7 +63,7 @@ public class UserController {
 
 
     @GetMapping("/admin/adminProfile")
-    public String adminProfiles() {
+    public String adminProfiles(String email) {
         return "Admin Profile";
     }
 
